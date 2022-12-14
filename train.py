@@ -27,7 +27,6 @@ def train(train_loader, model, criterion, optimizer):
         total += label.size(0)
         correct += predicted.eq(label.data).cpu().sum()
         if i % 50 == 0:
-
             print('Step: %d | Loss: %.3f | Acc: %.3f%% (%d/%d)' % (
                 i, train_loss / (i + 1), 100. * float(correct) / total, correct, total))
 
