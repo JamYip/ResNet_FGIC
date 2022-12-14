@@ -17,7 +17,7 @@ def train(train_loader, model, criterion, optimizer):
 
         output = model(input)
         loss = criterion(output, label)
-        # optimizer.zero_grad()
+        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
